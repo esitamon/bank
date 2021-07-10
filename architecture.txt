@@ -1,0 +1,53 @@
+
+Design problem:
+
+Rico a successful millionaire just launched a new banking service named "lux bank"
+The bank provides the highest intrest rate in the world. As a the result of their offer that beats their competitor's, their business is booming prompting the new CEO to expand globally.
+You are hired as a consultant to design their global financial service software. 
+
+1 - list of service offer by " lux bank "
+    - Personal checking account
+    - Personal saving account 
+    - CDs account 
+    - Credit card line
+    - 1 - constrain:
+        - Can open an account at lux bank anyone with a global credit score > 500
+        - To open a saving account one needs to already have opened a checking account.
+          Any saving account which is debited by the client more than 6 times in a month is automatically turned into a checking account
+    - lux bank provide international transfer for a fee of 1.5% of the amount
+      transfered, and local transfer at no cost accross different bank 
+    - a fee of 18% is levy on all premature withdrawl from a CDs account 
+    - all saving account benefits from a compound intrest of 3% per annum
+    - transaction performed outside of region of origin of the coustomer trigger
+      account freeze until resolve by a banking agent, customer can approve international transaction prior to  traveling or performing an international transaction 
+
+- Person
+  name
+  address
+  origin
+- origin
+  name 
+  code
+- Business 
+  ibn: international business number
+  address:
+  origin 
+- account
+  accoun_number
+  customer
+  bank
+  transaction
+- customer
+  id 
+  account 
+- atm 
+  bank 
+- transaction
+  date
+  timestamp: time until fullfilment 
+  initiator
+  beneficiary
+  bank 
+- loan
+  loan_id 
+  customer 
